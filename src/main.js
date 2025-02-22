@@ -31,3 +31,5 @@ navLinkItems.forEach(function (link) {
         menuToggle.innerHTML = "☰"; // Reset to burger icon
     });
 });
+
+console.log("JS Loaded");
