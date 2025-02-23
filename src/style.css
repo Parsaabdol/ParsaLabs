@@ -1,0 +1,443 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background Container for Dynamic Changes */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background 1.5s ease-in-out;
+  z-index: -1;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 5%;
+  background:transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+}
+
+.navbar .logo {
+  width: 150px;
+  height: auto;
+  left: 10px;
+  top: 0px;
+}
+
+.navbar .logo img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  min-width: 100px; /* Ensures logo doesn't become too small */
+  max-width: 150px; /* Keeps logo at a reasonable size */
+}
+
+.nav-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Evenly spaces items */
+  justify-content: center; /* Centers items */
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 2px solid #000000; /* Adds a border */
+  border-radius: 6px; /* Optional: Rounds the corners */
+  background-color: white; /* Optional: Adds a background */
+  gap: 10px; /* Adds spacing between items */
+  max-width: 80%;
+}
+
+.nav-links li {
+  text-align: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevents words from breaking */
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.business-services {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: -20px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+}
+
+.service-item img {
+  width: 120px; /* Adjust as needed */
+  height: 110px;
+  opacity: 0.9; /* Slight transparency */
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+
+
+.menu-toggle {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.cta-buttons .btn {
+  background-color: #38bdf8;
+  color: rgb(0, 0, 0);
+  padding: 0.6rem 1rem; /* Reduced padding */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevents text from wrapping */
+  min-width: 120px; /* Keeps button from becoming too small */
+  text-align: center; /* Ensures text stays centered */
+  margin-left: 10px;
+}
+
+
+.cta-buttons .btn:hover {
+  background-color: #0284c7;
+}
+.btn.primary {
+  background-color: #38bdf8;
+  color: rgb(0, 0, 0);
+  padding: 0.6rem 1rem; /* Same padding as CTA button */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  white-space: nowrap;
+  min-width: 120px;
+  text-align: center;
+  display: inline-block; /* Ensures proper button styling */
+  margin-top: 20px; /* Adds spacing between text and button */
+}
+
+.btn.primary:hover {
+  background-color: #0284c7;
+}
+
+
+/* Hero Section */
+.hero1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: url('5153829.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-overlay {
+  width: 70%;
+  height: 450px;
+  background: rgba(118, 189, 202, 0.699);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  overflow-y:scroll; /* Makes it scrollable */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.text-overlay h1, .text-overlay p {
+  margin: 10px 0;
+}
+.hero1 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero1 p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* About Section - Styled Similar to Hero */
+.hero2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: url('background2.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text Overlay for About Section */
+.text-overlay-about {
+  width: 70%;
+  min-height: 450px;
+  background: rgba(118, 189, 202, 0.699);
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Typography */
+.text-overlay-about h2, .text-overlay-about p {
+  margin: 10px 0;
+}
+
+.hero2 h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero2 p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px; /* Limits the image size */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Centers the image and adds spacing */
+  border-radius: 10px; /* Slight rounding for aesthetics */
+}
+
+
+/* Fixed Shadows */
+.shadow-fixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  pointer-events: none;
+  background: radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+
+  z-index: 1700;
+}
+
+
+/* Positioning Shadows */
+.bottom-shadow {
+  bottom: 0;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
+
+}
+
+.top-shadow {
+  top: 0;
+  opacity: 0;
+  background: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+
+  transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+  margin-top: 50px;
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem;
+    position: relative;
+  }
+
+  /* Position logo and menu toggle */
+  .navbar .logo {
+    position:absolute;
+    left: 10px;
+    top: 0px;
+    z-index: 1100;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Position "Get in Touch" button in between logo and menu toggle */
+  .cta-buttons {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    z-index: 1400;
+  }
+  /* Make "Get in Touch" button smaller */
+.cta-buttons .btn {
+    background-color: #38bdf8;
+    color: rgb(0, 0, 0);
+    padding: 0.6rem 0.7rem;  /* Reduce padding */
+    font-size: 0.88rem;  /* Reduce text size */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  width: 100%; /* Make sure it spans full width */
+  max-width: 100vw; /* Ensures no extra space */
+  background-color: #38bdf8;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  padding: 1rem 0;
+  z-index: 1500;
+}
+
+.nav-links.active {
+  display: flex;
+  width: 100%;
+}
+
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  main {
+    transition: margin-top 0.3s ease-in-out; /* Smooth transition */
+}
+
+.menu-expanded main {
+    margin-top: 300px; /* Adjust this value to match your expanded menu height */
+}
+
+.business-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Reduce gap for better spacing */
+  margin-top:10px;
+}
+
+.service-item {
+  max-width: 100%; /* Adjust width for better responsiveness */
+}
+
+.service-item img {
+  width: 120px; /* Reduce size slightly for mobile */
+  height: auto;
+}
+
+.text-overlay {
+  width: 90%; /* Make it take more width on smaller screens */
+  height: auto; /* Let it adjust based on content */
+  padding: 15px;
+  overflow-y: auto; /* Ensures scrolling inside if needed */
+  max-height: 75vh; /* Prevents overflow beyond viewport */
+}
+
+
+ /* Make Hero2 Responsive */
+ .hero2 {
+  height: auto; /* Adjust height based on content */
+  padding: 50px 5%; /* Adds padding for spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Text Overlay */
+.text-overlay-about {
+  width: 90%; /* Expands width for better visibility */
+  min-height: auto; /* Adjust height based on content */
+  max-height: 80vh; /* Prevents overflow beyond viewport */
+  padding: 15px; /* Smaller padding for mobile */
+  overflow-y: auto; /* Allows scrolling inside if needed */
+  position: relative; /* Prevents overlapping */
+  transform: none; /* Removes translate centering */
+  top: auto;
+  left: auto;
+}
+
+/* Adjust Typography */
+.hero2 h2 {
+  font-size: 2rem; /* Reduce heading size */
+  text-align: center; /* Center align */
+}
+
+.hero2 p {
+  font-size: 1rem; /* Reduce paragraph size */
+  text-align: center;
+}
+
+/* Responsive Images */
+.about-image {
+  max-width: 250px; /* Reduce size */
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+/* Center the Button */
+.text-overlay-about .btn.primary {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
+}
