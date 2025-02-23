@@ -142,7 +142,7 @@
   align-items: center;
   height: 100vh;
   position: relative;
-  background: url('./images/5153829.jpg') no-repeat center center/cover;
+  background: url('5153829.jpg') no-repeat center center/cover;
 }
 
 .text-overlay {
